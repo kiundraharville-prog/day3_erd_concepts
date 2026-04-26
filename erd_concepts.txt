@@ -1,0 +1,71 @@
+Entity Relationship Diagram (ERD) Concepts
+
+1. How are entities defined and represented in an ERD?
+
+Entities represent real-world objects or concepts, such as a Person, Pet, or Course.
+In an ERD, entities are represented by rectangles. Each entity usually becomes a table in a database.
+
+
+2. How are attributes defined and associated with entities?
+
+Attributes are properties or characteristics of an entity.
+For example, a Person entity may have attributes like name, age, and email.
+In an ERD, attributes are typically shown as ovals connected to their entity.
+In a database, attributes become columns in a table.
+
+
+3. What is a relationship, how is it represented, and how does it connect entities?
+
+A relationship shows how two entities are connected or interact with each other.
+Relationships are represented by lines (or diamonds in some diagrams) connecting entities.
+They define how data in one table relates to data in another.
+
+Example:
+A Person owns a Pet.
+
+
+4. List and describe the different types of Relationships (Cardinality)
+
+One-to-One (1:1):
+One record in Entity A is related to one record in Entity B.
+Example: One person has one passport.
+
+One-to-Many (1:N):
+One record in Entity A can be related to many records in Entity B.
+Example: One person can own many pets.
+
+Many-to-Many (N:M):
+Many records in Entity A can be related to many records in Entity B.
+Example: Students can enroll in many courses, and courses can have many students.
+This type usually requires a junction table.
+
+
+5. ERD: People that own Pets
+
+Entities:
+Person
+Pet
+
+Attributes:
+
+Person:
+- person_id (Primary Key)
+- first_name
+- last_name
+
+Pet:
+- pet_id (Primary Key)
+- name
+- type
+- age
+- person_id (Foreign Key)
+
+Relationship:
+A Person owns a Pet.
+
+Cardinality:
+One-to-Many (1:N)
+One person can own multiple pets, but each pet belongs to one person.
+
+Explanation:
+The foreign key (person_id) is placed in the Pet entity to link each pet to its owner.
